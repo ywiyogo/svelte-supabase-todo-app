@@ -79,3 +79,10 @@ npx tailwindcss init
     ```
 5. Run `npm run gh-deploy` on your terminal locally.
 6. Go to the Github repository -> Settings -> Pages -> Set source to the Branch:gh-pages and root folder, thne save.
+
+# Supabase Backend Integration
+
+1. `npm install @supabase/supabase-js`
+2. Create a .env file and add the variables `SUPABASE_URL` and `SUPABASE_ANON_KEY`
+3. Login and create a table in supabase.com. Copy the Supabase URL and the anon key to the .env file.
+4. Create supabase.ts/.js under the src folder

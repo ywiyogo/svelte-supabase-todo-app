@@ -1,5 +1,7 @@
 <script lang="ts">
   import "../styles/app.css";
+  import { supabase } from "../supabase.ts";
+  console.log(supabase);
 </script>
 
 <main>
