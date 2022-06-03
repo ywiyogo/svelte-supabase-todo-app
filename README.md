@@ -53,3 +53,29 @@ npx tailwindcss init
 * create a css file under /src/styles/app.css
 * create a __layout.svelte under /src/routes
 * Add `import '../styles/app.css';`
+
+# Deployment
+
+# Github Pages
+
+1. Install gh-pages `npm install -D gh-pages`
+2. Add this line in packages.json inside the `script`key:
+    ```
+    "gh-deploy": "touch build/.nojekyll && gh-pages -d build -t true -o github",
+    ```
+    The `-o` options refers to the local remote that points to the github repository. Omit it if you use the default remote `origin`.
+3. Run `npm install -D @sveltejs/adapter-static` and replace `import adapter from '@sveltejs/adapter-auto';` with `import adapter from '@sveltejs/adapter-static';`
+4. Edit the `kit` key in the svelte.config.js to:
+    ```
+    kit: {
+        adapter: adapter(),
+        prerender: {
+        default: true,
+        },
+        paths: {
+            base: process.env.NODE_ENV === "production" ? "/svelte-supabase-todo-app" : "",
+        },
+    },
+    ```
+5. Run `npm run gh-deploy` on your terminal locally.
+6. Go to the Github repository -> Settings -> Pages -> Set source to the Branch:gh-pages and root folder, thne save.
