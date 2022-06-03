@@ -1,7 +1,9 @@
 <!-- TodoForm component describes the form to input a todo entry -->
 <script lang="ts">
   let todo = "";
+  import { addTodo } from "../stores/TodoStore.js";
   const handleSubmit = () => {
+    addTodo(todo);
     todo = "";
     console.log("submitting");
   };

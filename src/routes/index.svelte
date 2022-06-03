@@ -1,5 +1,6 @@
-<script>
+<script lang="ts">
   import TodoForm from "../components/TodoForm.svelte";
+  import { todos } from "../stores/TodoStore.js";
 </script>
 
 <main>
@@ -7,4 +8,7 @@
     My First Svelte Todo App
   </h1>
   <TodoForm />
+  {#each $todos as todo}
+    <p>{todo.text}</p>
+  {/each}
 </main>
