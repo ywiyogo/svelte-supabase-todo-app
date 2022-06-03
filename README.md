@@ -47,3 +47,9 @@ npx tailwindcss init
 
 * Create a file postcss.config.cjs
 * Rename tailwind.config.js to tailwind.config.cjs.
+
+## Setup
+
+* create a css file under /src/styles/app.css
+* create a __layout.svelte under /src/routes
+* Add `import '../styles/app.css';`
