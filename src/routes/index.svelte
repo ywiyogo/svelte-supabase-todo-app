@@ -1,6 +1,7 @@
 <script lang="ts">
   import TodoForm from "../components/TodoForm.svelte";
   import { todos } from "../stores/TodoStore.js";
+  import Todo from '../components/Todo.svelte';
 </script>
 
 <main>
@@ -9,6 +10,6 @@
   </h1>
   <TodoForm />
   {#each $todos as todo}
-    <p>{todo.text}</p>
+    <Todo {todo} index={todo.id} />
   {/each}
 </main>
