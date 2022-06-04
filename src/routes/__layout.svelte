@@ -3,7 +3,8 @@
   import { supabase } from "../supabase.ts";
   import Auth from "../components/Auth.svelte";
   import { user } from "../stores/AuthStore.ts";
-  import { loadTodos } from "../stores/TodoStore.js";
+  import { loadTodos } from "../stores/TodoStore.ts";
+  import Navbar from "../components/Navbar.svelte";
   console.log(supabase);
 
   user.set(supabase.auth.user());
@@ -19,6 +20,7 @@
   <div class="container max-w-4xl mx-auto py-8">
     <!-- Show the authentication page if no user logged in -->
     {#if $user}
+      <Navbar />
       <slot />
     {:else}
       <Auth />
