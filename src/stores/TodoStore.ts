@@ -3,7 +3,8 @@
 import { writable } from "svelte/store";
 import { supabase } from "../supabase.ts";
 
-export const todos = writable([]);
+// A list of the todo entries
+export const todoEntries = writable([]);
 
 export const loadTodos = async () => {
 	const { data, error } = await supabase.from('todo').select();
@@ -11,7 +12,7 @@ export const loadTodos = async () => {
 	if (error) {
 		return console.error(error);
 	} else {
-		todos.set(data);
+		todoEntries.set(data);
 	}
 }
 
@@ -22,7 +23,7 @@ export const addTodo = async (text, user_id) => {
 		return console.error(error);
 	}
 	// pass a callback function to the update function
-	todos.update((cur) => [...cur, data[0]]);
+	todoEntries.update((cur) => [...cur, data[0]]);
 };
 
 export const deleteTodo = async (id) => {
@@ -30,7 +31,7 @@ export const deleteTodo = async (id) => {
 	if (error) {
 		return console.error(error);
 	}
-	todos.update((todos) => todos.filter((todo) => todo.id !== id));
+	todoEntries.update((todoEntries) => todoEntries.filter((todo) => todo.id !== id));
 };
 
 export const toggleTodoCompleted = async (id, currentState) => {
@@ -38,17 +39,17 @@ export const toggleTodoCompleted = async (id, currentState) => {
 	if (error) {
 		return console.error(error);
 	}
-	todos.update((todos) => {
+	todoEntries.update((todoEntries) => {
 		let index = -1;
-		for (let i = 0; i < todos.length; i++) {
-			if (todos[i].id === id) {
+		for (let i = 0; i < todoEntries.length; i++) {
+			if (todoEntries[i].id === id) {
 				index = i;
 				break;
 			}
 		}
 		if (index !== -1) {
-			todos[index].completed = !todos[index].completed;
+			todoEntries[index].completed = !todoEntries[index].completed;
 		}
-		return todos;
+		return todoEntries;
 	});
 };
