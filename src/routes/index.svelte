@@ -1,7 +1,7 @@
 <script lang="ts">
   import TodoForm from "../components/TodoForm.svelte";
   import { todos } from "../stores/TodoStore.js";
-  import Todo from '../components/Todo.svelte';
+  import Todo from "../components/Todo.svelte";
 </script>
 
 <main>
