@@ -1,56 +1,136 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-11824a3b.js",
+    "file": "start-b67a42ec.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_index-bf526788.js",
-      "_index-22f480aa.js"
+      "_index-d933d993.js",
+      "_index-13129d7e.js",
+      "_singletons-1b661bce.js"
     ],
     "dynamicImports": [
       "src/routes/__layout.svelte",
       ".svelte-kit/runtime/components/error.svelte",
-      "src/routes/index.svelte"
+      "src/routes/about.svelte",
+      "src/routes/index.svelte",
+      "src/routes/login.svelte",
+      "src/routes/signup.svelte"
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-a63ed948.js",
+    "file": "pages/__layout.svelte-769b12b5.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-bf526788.js"
+      "_index-d933d993.js",
+      "_AuthStore-94daa87b.js",
+      "_stores-0d309780.js",
+      "_TodoStore-ba17db93.js",
+      "_singletons-1b661bce.js",
+      "_index-13129d7e.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-d7152e96.css"
+      "assets/pages/__layout.svelte-b49074e7.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
-    "file": "error.svelte-f9a3bd06.js",
+    "file": "error.svelte-3a8f0ea2.js",
     "src": ".svelte-kit/runtime/components/error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-bf526788.js"
+      "_index-d933d993.js"
+    ]
+  },
+  "src/routes/about.svelte": {
+    "file": "pages/about.svelte-44bf303f.js",
+    "src": "src/routes/about.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-d933d993.js"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-9755a924.js",
+    "file": "pages/index.svelte-2be5a1a7.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-bf526788.js",
-      "_index-22f480aa.js"
+      "_index-d933d993.js",
+      "_TodoStore-ba17db93.js",
+      "_AuthStore-94daa87b.js",
+      "_index-13129d7e.js"
     ]
   },
-  "_index-bf526788.js": {
-    "file": "chunks/index-bf526788.js"
-  },
-  "_index-22f480aa.js": {
-    "file": "chunks/index-22f480aa.js",
+  "src/routes/login.svelte": {
+    "file": "pages/login.svelte-b6ce4d3b.js",
+    "src": "src/routes/login.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
     "imports": [
-      "_index-bf526788.js"
+      "_index-d933d993.js",
+      "_Auth-c5fce4d7.js",
+      "_AuthStore-94daa87b.js",
+      "_stores-0d309780.js",
+      "_singletons-1b661bce.js",
+      "_index-13129d7e.js"
+    ]
+  },
+  "src/routes/signup.svelte": {
+    "file": "pages/signup.svelte-50d7726c.js",
+    "src": "src/routes/signup.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-d933d993.js",
+      "_Auth-c5fce4d7.js",
+      "_AuthStore-94daa87b.js",
+      "_stores-0d309780.js",
+      "_singletons-1b661bce.js",
+      "_index-13129d7e.js"
+    ]
+  },
+  "_index-d933d993.js": {
+    "file": "chunks/index-d933d993.js"
+  },
+  "_index-13129d7e.js": {
+    "file": "chunks/index-13129d7e.js",
+    "imports": [
+      "_index-d933d993.js"
+    ]
+  },
+  "_singletons-1b661bce.js": {
+    "file": "chunks/singletons-1b661bce.js"
+  },
+  "_AuthStore-94daa87b.js": {
+    "file": "chunks/AuthStore-94daa87b.js",
+    "imports": [
+      "_index-13129d7e.js"
+    ]
+  },
+  "_stores-0d309780.js": {
+    "file": "chunks/stores-0d309780.js",
+    "imports": [
+      "_singletons-1b661bce.js",
+      "_index-d933d993.js"
+    ]
+  },
+  "_TodoStore-ba17db93.js": {
+    "file": "chunks/TodoStore-ba17db93.js",
+    "imports": [
+      "_index-13129d7e.js",
+      "_AuthStore-94daa87b.js"
+    ]
+  },
+  "_Auth-c5fce4d7.js": {
+    "file": "chunks/Auth-c5fce4d7.js",
+    "imports": [
+      "_index-d933d993.js",
+      "_AuthStore-94daa87b.js",
+      "_stores-0d309780.js",
+      "_singletons-1b661bce.js"
     ]
   }
 }
